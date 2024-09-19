@@ -1,0 +1,172 @@
+/* Global Reset */
+body, h1, h2, p, div, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #2a2a72, #009ffd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background-size: 400% 400%;
+    animation: gradient-bg 15s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradient-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism Card */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* Search Bar Styling */
+.search {
+    display: flex;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.search input {
+    flex-grow: 1;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px 0 0 12px;
+    outline: none;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.search input::placeholder {
+    color: #ccc;
+}
+
+.search button {
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 0 12px 12px 0;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search button img {
+    width: 22px;
+    height: 22px;
+}
+
+.search button:hover {
+    background-color: #ee5253;
+    transform: scale(1.05);
+}
+
+/* Weather Information */
+.weather {
+    margin-top: 30px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.weather-icon {
+    width: 130px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+.weather-icon:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.temp {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.city {
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Additional Weather Details */
+.details {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.col img {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+}
+
+.col p {
+    font-size: 16px;
+    margin: 3px 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.col:hover {
+    transform: scale(1.05);
+}
+
+.humidity, .wind {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
